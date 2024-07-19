@@ -12,6 +12,36 @@ Order management app is a full-stack web application built with RedwoodJS, desig
 6. AuthenticationL RedwoodJS AUth
 7. GraphQL: Apollo
 
+# Directory Structure
+
+```
+.
+├── api
+│   ├── db
+│   │   ├── migrations
+│   │   ├── schema.prisma
+│   │   └── seed.ts
+│   ├── graphql
+│   │   ├── orders.sdl.ts
+│   │   ├── pizzas.sdl.ts
+│   │   └── users.sdl.ts
+│   ├── lib
+│   │   └── db.ts
+│   ├── services
+│   │   ├── orders
+│   │   │   └── orders.ts
+│   │   ├── pizzas
+│   │   │   └── pizzas.ts
+│   │   └── users
+│   │       └── users.ts
+│   └── functions
+│       └── graphql.ts
+├── web
+│   ├── src
+│   │   ├──
+
+```
+
 # Database Configuration
 
 The application uses PostgreSQL as the database. The schema is managed using Prisma
@@ -100,4 +130,12 @@ mutation CreateUserMutation($input: CreateUserInput!) {
     id
   }
 }
+```
+
+# Seeding the Database
+
+## To seed the database with initial data, run the seed script
+
+```
+yarn rw prisma db seed
 ```
