@@ -21,21 +21,23 @@ Order management app is a full-stack web application built with RedwoodJS, desig
 │   │   ├── migrations
 │   │   ├── schema.prisma
 │   │   └── seed.ts
-│   ├── graphql
-│   │   ├── orders.sdl.ts
-│   │   ├── pizzas.sdl.ts
-│   │   └── users.sdl.ts
-│   ├── lib
-│   │   └── db.ts
-│   ├── services
-│   │   ├── orders
-│   │   │   └── orders.ts
-│   │   ├── pizzas
-│   │   │   └── pizzas.ts
-│   │   └── users
-│   │       └── users.ts
-│   └── functions
-│       └── graphql.ts
+|   |── src
+|   |   |
+│   ├   |──   graphql
+│   │   |      ├── orders.sdl.ts
+│   │   |      ├── pizzas.sdl.ts
+│   │   |      └── users.sdl.ts
+│   ├   |──    lib
+│   │   |      └── db.ts
+│   ├   |──    services
+│   │   |      ├── orders
+│   │   |      │     └── orders.ts
+│   │   |      ├── pizzas
+│   │   |      │   └── pizzas.ts
+│   │   |      └── users
+│   │   |          └── users.ts
+│   |   |      └── functions
+│   |   |             └── graphql.ts
 ├── web
 │   ├── src
 │   │   ├──
