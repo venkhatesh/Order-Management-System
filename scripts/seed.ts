@@ -18,7 +18,44 @@ export default async () => {
     // ]
     //
     // await db.user.createMany({ data: users })
+    const margherits = await db.pizza.create({
+      data: {
+          name: 'Margherita',
+          toppings: ['Tomato', 'Mozzarella'],
+          price:  8.5,
+      },
+  })
 
+  const pepperoni = await db.pizza.create({
+      data: {
+          name: 'Pepperoni',
+          toppings: ['Tomato', 'Mozzarella', 'Pepperoni'],
+          price: 9.5,
+      },
+  })
+  
+  // const veggie = await db.pizza.create({
+  //     data: {
+  //         pizzas: {
+  //             create: [
+  //                 {pizza: { connect: {id: margherits.id }}},
+  //                 {pizza: { connect: {id: pepperoni.id}}}
+  //             ]
+  //         }
+  //     }
+  // })
+
+  await db.order.create({
+      data: {
+        pizzas: {
+          create: [
+            { pizza: { connect: { id: margherits.id } } },
+            { pizza: { connect: { id: pepperoni.id } } },
+          ],
+        },
+      },
+    })
+    
     console.info(
       '\n  No seed data, skipping. See scripts/seed.ts to start seeding your database!\n'
     )

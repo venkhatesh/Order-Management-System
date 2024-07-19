@@ -7,8 +7,13 @@
     ]
   },
   "devDependencies": {
+    "@redwoodjs/auth-dbauth-setup": "7.7.3",
     "@redwoodjs/core": "7.7.3",
-    "@redwoodjs/project-config": "7.7.3"
+    "@redwoodjs/project-config": "7.7.3",
+    "@types/node": "^20.14.11",
+    "autoprefixer": "^10.4.19",
+    "postcss": "^8.4.39",
+    "tailwindcss": "^3.4.6"
   },
   "eslintConfig": {
     "extends": "@redwoodjs/eslint-config",
@@ -20,5 +25,9 @@
   "prisma": {
     "seed": "yarn rw exec seed"
   },
-  "packageManager": "yarn@4.3.0"
+  "packageManager": "yarn@4.3.0",
+  "dependencies": {
+    "@prisma/client": "^5.17.0",
+    "graphql-tag": "^2.12.6"
+  }
 }
