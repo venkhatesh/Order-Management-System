@@ -51,6 +51,16 @@ The application uses PostgreSQL as the database. The schema is managed using Pri
 ## Prisma Schema(`api/db/schema.prisma`)
 
 ```
+model User {
+  id Int @id @default(autoincrement())
+  email String @unique
+  password String
+  salt String @default("default_salt")
+  name String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
 model Pizza {
   id       Int      @id @default(autoincrement())
   name     String
